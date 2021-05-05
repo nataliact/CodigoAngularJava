@@ -1,0 +1,28 @@
+<button mat-button *ngIf="isAuthenticated" (click)="logout()">
+    <mat-icon>exit_to_app</mat-icon>
+    Logout
+  </button>
+
+<mat-card>
+    <mat-card-content>
+        <div mat-card-avatar class="image">
+            <img mat-card-image src={{respuesta.profilePhoto}} alt="imagen">            
+        </div>
+        <mat-card-title>{{ respuesta.firstName}} {{respuesta.lastName }}</mat-card-title>
+        <mat-card-subtitle>{{ respuesta.age}} años</mat-card-subtitle>
+    
+        <h2></h2>
+
+        <youtube-player 
+            videoId={{respuesta.video}}
+            [height]="200"
+            [width]="400" 
+            [startSeconds]="4"
+            [endSeconds]="8">
+        </youtube-player>
+
+        
+        
+      
+    </mat-card-content>
+  </mat-card>
